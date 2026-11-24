@@ -19,3 +19,11 @@ Constraints
 - Use only the C++ concepts you already know.
 - Handle every possible arrangement, including duplicate and negative numbers.
 */
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    return 0;
+}
