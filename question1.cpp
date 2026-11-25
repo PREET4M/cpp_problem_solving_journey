@@ -24,6 +24,14 @@ Constraints
 using namespace std;
 
 int main() {
+    int num1, num2, num3, mid;
+    cout<<"Enter 3 numbers : "<<endl;
+    cin>>num1>>num2>>num3;
+    
+    if (num1>num2 && num1>num3)
+    {
+        /* code */
+    }
     
     return 0;
 }
