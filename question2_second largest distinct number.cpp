@@ -27,18 +27,17 @@ Constraints
 using namespace std;
 
 int main() {
-    cout<<"give 4 integers : "<<endl;
-    int a, b, c, d, second_highest, highest;
+    cout<<"Enter 4 numbers : "<<endl;
+    int a, b, c, d, second_highest;
     cin>>a>>b>>c>>d;
 
-    if (a >b && a>c && a>d)
+    if (a > b && a > c && a > d)
     {
-        highest = a;
         if (b > c && b > d)
         {
             second_highest = b;
         }
-        else if (c > d)
+        else if (c > b && c > d)
         {
             second_highest = c;
         }
@@ -47,17 +46,55 @@ int main() {
             second_highest = d;
         }
     }
-
     else if (b > a && b > c && b > d)
     {
-        highest = b;
-        if (a > )
+        if (a > c && a > d)
         {
-            /* code */
+            second_highest = a;
         }
-        
+        else if (c > a && c > d)
+        {
+            second_highest = c;
+        }
+        else
+        {
+            second_highest = d;
+        }    
+    }
+
+    else if (c > a && c > b && c > d)
+    {
+        if (a > b && a > d)
+        {
+            second_highest = a;
+        }
+        else if (b > a && b > d)
+        {
+            second_highest = b;
+        }
+        else
+        {
+            second_highest = d;
+        } 
+    }
+
+    else
+    {
+        if (a > b && a > c)
+        {
+            second_highest = a;
+        }
+        else if (b > a && b > c)
+        {
+            second_highest = b;
+        }
+        else
+        {
+            second_highest = c;
+        }  
     }
     
+    cout<<"Second Highes Number = "<<second_highest;
     
     return 0;
 }
