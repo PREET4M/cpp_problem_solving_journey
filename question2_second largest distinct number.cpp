@@ -30,27 +30,30 @@ int main() {
     int num;
     int highest = -10001;
     int second_highest = -10001;
-
-    cout << "Enter 4 numbers: ";
-
-    for (int i = 0; i < 4; i++) {
-        cin >> num;
-
-        if (num > highest) {
+    cout<<"enter 4 integers : "<<endl;
+    for (int i = 0; i < 4; i++)
+    {
+        cin>>num;
+        if (num > highest)
+        {
             second_highest = highest;
             highest = num;
         }
-        else if (num > second_highest && num < highest) {
+        else if (num > second_highest && num < highest)
+        {
             second_highest = num;
         }
+        
     }
-
-    if (second_highest == -10001) {
-        cout << "Not possible";
+    if (second_highest == -10001)
+    {
+        cout<<"Not Possible"<<endl;
     }
-    else {
-        cout << "Second highest = " << second_highest;
+    else
+    {
+        cout<<"Second Highest = "<<second_highest;
     }
-
+    
+    
     return 0;
 }
