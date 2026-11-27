@@ -27,74 +27,30 @@ Constraints
 using namespace std;
 
 int main() {
-    cout<<"Enter 4 numbers : "<<endl;
-    int a, b, c, d, second_highest;
-    cin>>a>>b>>c>>d;
+    int num;
+    int highest = -10001;
+    int second_highest = -10001;
 
-    if (a > b && a > c && a > d)
-    {
-        if (b > c && b > d)
-        {
-            second_highest = b;
+    cout << "Enter 4 numbers: ";
+
+    for (int i = 0; i < 4; i++) {
+        cin >> num;
+
+        if (num > highest) {
+            second_highest = highest;
+            highest = num;
         }
-        else if (c > b && c > d)
-        {
-            second_highest = c;
+        else if (num > second_highest && num < highest) {
+            second_highest = num;
         }
-        else
-        {
-            second_highest = d;
-        }
-    }
-    else if (b > a && b > c && b > d)
-    {
-        if (a > c && a > d)
-        {
-            second_highest = a;
-        }
-        else if (c > a && c > d)
-        {
-            second_highest = c;
-        }
-        else
-        {
-            second_highest = d;
-        }    
     }
 
-    else if (c > a && c > b && c > d)
-    {
-        if (a > b && a > d)
-        {
-            second_highest = a;
-        }
-        else if (b > a && b > d)
-        {
-            second_highest = b;
-        }
-        else
-        {
-            second_highest = d;
-        } 
+    if (second_highest == -10001) {
+        cout << "Not possible";
+    }
+    else {
+        cout << "Second highest = " << second_highest;
     }
 
-    else
-    {
-        if (a > b && a > c)
-        {
-            second_highest = a;
-        }
-        else if (b > a && b > c)
-        {
-            second_highest = b;
-        }
-        else
-        {
-            second_highest = c;
-        }  
-    }
-    
-    cout<<"Second Highes Number = "<<second_highest;
-    
     return 0;
 }
