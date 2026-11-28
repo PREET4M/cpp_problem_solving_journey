@@ -37,27 +37,3 @@ Constraints
 - Aim for O(n) time and O(1) auxiliary space.
 */
 
-#include <iostream>
-#include <string>
-using namespace std;
-
-int main() {
-    cout<<"Enter the word : ";
-    string word, word_reversed;
-    cin>>word;
-
-    for (int i = word.length()-1 ; i >= 0 ; i--)
-    {
-        word_reversed.push_back(word[i]);
-    }
-    
-    if (word == word_reversed)
-    {
-        cout<<"Palindrome"<<endl;
-    }
-    else{
-        cout<<"not an palindrome"<<endl;
-    }
-    
-    return 0;
-}
